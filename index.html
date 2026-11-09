@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Última Dica</title>
+<meta name="theme-color" content="#050914">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+
+<section id="menu" class="scr on">
+  <h1>Última Dica</h1>
+  <p class="sub">Descubra quem, onde ou o quê com o mínimo de pistas.<br>Jogue online entre celular, tablet e computador.</p>
+  <input id="nome" maxlength="14" placeholder="Seu nome" autocomplete="off">
+  <button class="big" id="bOnline">Modo Online</button>
+  <button class="big alt" id="bLocal">Modo Local</button>
+  <details>
+    <summary>Como jogar</summary>
+    <ul>
+      <li>Cada rodada tem uma carta secreta (pessoa, lugar, coisa ou ano) com 20 dicas.</li>
+      <li>As dicas aparecem uma por vez, na ordem, da mais difícil à mais fácil.</li>
+      <li>Na sua vez, você recebe a dica e escolhe: dar um palpite ou passar.</li>
+      <li>Cada jogador pode dar um palpite por dica. Errou? A vez passa e sai a próxima dica.</li>
+      <li>Quem acerta ganha os pontos que restam: acertar na dica 1 vale 20, na dica 20 vale 1.</li>
+      <li>No online, quem demorar mais de 60 segundos perde a vez.</li>
+      <li>Se ninguém acertar até a dica 20, a rodada termina sem pontos.</li>
+      <li>Vence quem tiver mais pontos depois da última rodada.</li>
+    </ul>
+  </details>
+</section>
+
+<section id="online" class="scr">
+  <h2>Modo Online</h2>
+  <input id="nome2" maxlength="14" placeholder="Seu nome" autocomplete="off">
+  <button class="big" id="bCriar">Criar sala</button>
+  <div class="row">
+    <input id="cod" maxlength="5" placeholder="Código da sala" autocomplete="off">
+    <button id="bEntrar">Entrar</button>
+  </div>
+  <p id="onMsg" class="aviso"></p>
+  <button class="link" data-back>Voltar</button>
+</section>
+
+<section id="lobby" class="scr">
+  <h2 id="lobTit">Sala</h2>
+  <p id="codBox" class="codigo"></p>
+  <button class="alt2" id="bLink">Copiar link da sala</button>
+  <ul id="lista" class="lista"></ul>
+  <div class="row" id="addBox">
+    <input id="novo" maxlength="14" placeholder="Nome do jogador" autocomplete="off">
+    <button id="bAdd">Adicionar</button>
+  </div>
+  <label id="temBox">Tema <select id="tema"></select></label>
+  <label id="catBox">Categoria <select id="categoria"></select></label>
+  <label id="rodBox">Rodadas
+    <select id="rod"><option>3</option><option selected>5</option><option>8</option><option>10</option></select>
+  </label>
+  <p id="lobInfo" class="aviso"></p>
+  <button class="big" id="bStart">Começar jogo</button>
+  <button class="link" id="bSair">Sair</button>
+</section>
+
+<section id="game" class="scr">
+  <header id="hud"></header>
+  <div id="vez" class="vez"></div>
+  <ol id="dicas"></ol>
+  <p id="msg" class="aviso"></p>
+  <div id="acao" class="row">
+    <input id="palpite" placeholder="Seu palpite" autocomplete="off">
+    <button id="bPalpite">Palpitar</button>
+    <button class="alt" id="bPassar">Passar</button>
+  </div>
+  <div id="rev" class="rev">
+    <p id="revTxt"></p>
+    <button class="big" id="bProx">Próxima rodada</button>
+  </div>
+  <ul id="placar" class="placar"></ul>
+</section>
+
+<section id="end" class="scr">
+  <h2>Fim de jogo</h2>
+  <p id="venc" class="venc"></p>
+  <ol id="rank" class="placar"></ol>
+  <button class="big" id="bNovo">Jogar de novo</button>
+  <button class="link" id="bMenu">Voltar ao menu</button>
+</section>
+
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.5.4/peerjs.min.js"></script>
+<script src="cartas.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
